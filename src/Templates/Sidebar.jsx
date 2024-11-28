@@ -33,9 +33,11 @@ const Sidebar = () => {
           People
         </Link>
       <hr className="border-none h-[1px] bg-zinc-500 mb-3" />
+      <h1 className="text-xl font-semibold mt-2 mb-4">Website Info.</h1>
+
       <Link className=" text-md  p-3 hover:bg-red-700 duration-300 hover:rounded-md mb-3 ">
       <i class="ri-information-fill mr-2"></i>
-          WebSite Info..
+          About 
         </Link>
         <Link className=" text-md  p-3 hover:bg-red-700 duration-300 hover:rounded-md mb-3 ">
         <i class="ri-customer-service-2-fill mr-2"></i>
