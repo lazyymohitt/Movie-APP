@@ -1,7 +1,7 @@
 import axios from "../utils/Axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import noimage from "../../src/noimage.webp"
+import noimage from "../../src/noimage.webp";
 
 const TopNav = () => {
   const [query, setQuery] = useState("");
@@ -21,7 +21,7 @@ const TopNav = () => {
   }, [query]);
   return (
     <div className=" relative navbar w-full h-[10vh] flex justify-start items-center gap-4 ">
-      <i class=" text-2xl font-semibold ri-search-line ml-[20%] mt-1"></i>
+      <i className=" text-2xl font-semibold ri-search-line ml-[20%] mt-1"></i>
       <input
         onChange={(e) => setQuery(e.target.value)}
         type="text"
@@ -32,7 +32,7 @@ const TopNav = () => {
       {query.length > 0 && (
         <i
           onClick={() => setQuery("")}
-          class="absolute right-[28%] text-md font-semibold  ri-close-large-line"
+          className="absolute right-[28%] text-md font-semibold  ri-close-large-line"
         ></i>
       )}
       <div className=" SearchedDiv absolute max-h-[50vh] overflow-auto w-[50%] top-[80%]  left-[23.5%] bg-[#27272A] rounded-md">
@@ -42,8 +42,14 @@ const TopNav = () => {
             className=" w-[100%] py-10 px-8  bg-zinc-300 hover:bg-zinc-400 hover:text-black duration-200 flex"
           >
             <img
-              className="w-[10vh] h-[12vh] rounded-lg object-cover  mr-4"
-              src={ movie.poster_path || movie.profile_path ? `https://image.tmdb.org/t/p/original${movie.poster_path || movie.profile_path}`: noimage}
+              className="w-[10vh] h-[12vh] rounded-lg object-cover shadow-lg  mr-4"
+              src={
+                movie.poster_path || movie.profile_path
+                  ? `https://image.tmdb.org/t/p/original${
+                      movie.poster_path || movie.profile_path
+                    }`
+                  : noimage
+              }
               alt=""
             />
             <span>
