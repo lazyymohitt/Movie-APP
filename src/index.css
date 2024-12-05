@@ -2,13 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-i {
+i{
   color: #71717a;
 }
-
+/* * {
+  font-family: "Gilroy";
+} */
 ::-webkit-scrollbar {
-  height:10px;
-  width: 8px;
+  height:4px;
+  max-width: 10px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: rgb(148, 176, 254);
