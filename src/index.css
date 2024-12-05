@@ -9,8 +9,8 @@ i{
   font-family: "Gilroy";
 } */
 ::-webkit-scrollbar {
-  height:4px;
-  max-width: 10px;
+  width:8px;    /* For vertical scrollbars */
+  height: 3px;   /* For horizontal scrollbars */
 }
 ::-webkit-scrollbar-thumb {
   background-color: rgb(148, 176, 254);

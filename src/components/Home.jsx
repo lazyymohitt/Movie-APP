@@ -31,7 +31,7 @@ const Home = () => {
      console.log("Error", error)
     }
      }
-     console.log(cardsdets)
+    //  console.log(cardsdets)
   /////////////////////////////////////////
 //  useEffect here-----------------
   useEffect(() => {

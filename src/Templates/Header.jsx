@@ -19,9 +19,9 @@ const Header = ({ Image }) => {
     >
       <div className="dets h-[45%] px-10 relative text-white  top-[38%] ml-10 w-[48%]">
         <h1 className="text-4xl font-bold mb-2">
-          {Image.original_title || title.title}.
+          {Image.original_title || Image.title}.
         </h1>
-        <p className="text-sm  letter tracking-wider   leading-6">
+        <p className="text-sm  letter tracking-wider leading-6">
           {Image.overview.slice(0,120)}.
         </p>{" "}
         <Link className="text-blue-500">more...</Link>
