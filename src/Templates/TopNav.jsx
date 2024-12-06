@@ -1,7 +1,7 @@
 import axios from "../utils/Axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import noimage from "../../src/noimage.webp";
+import noimage from "/noimage.webp";
 
 const TopNav = () => {
   const [query, setQuery] = useState("");

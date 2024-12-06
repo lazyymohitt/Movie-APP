@@ -5,6 +5,7 @@ import Header from "../Templates/Header";
 import axios from "../utils/Axios";
 import { useEffect } from "react";
 import Cards from "../Templates/Cards";
+import Loader from "../Templates/Loader";
 
 const Home = () => {
   document.title = "StreamFlix | Home";
@@ -53,7 +54,7 @@ const Home = () => {
       <Cards trends={cardsdets} />
       </div>
     </>
-  ) : <h1 className="text-white text-5xl">Loadinggg.....</h1>
+  ) : <Loader/>
 };
 
 export default Home;
