@@ -14,7 +14,7 @@ const Header = ({ Image }) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="backGroundImage w-full h-1/2 "
+      className="backGroundImage w-full h-[50vh]"
     >
       <div className="dets h-[45%] px-10 relative text-white  top-[38%] ml-10 w-[48%]">
         <h1 className="text-4xl font-bold mb-2">
