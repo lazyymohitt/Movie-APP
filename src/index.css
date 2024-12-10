@@ -5,15 +5,17 @@
 i {
   color: #71717a;
 }
-/* * {
-  font-family: "Gilroy";
-} */
+* {
+  font-family: Gilroy;
+}
 ::-webkit-scrollbar {
-  width: 4px; /* For vertical scrollbars */
+  width: 8px; /* For vertical scrollbars */
   height: 3px; /* For horizontal scrollbars */
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #66686d;
+  background-color: #EF4444;
+  /* background-color: rgba(37, 37, 37, 0.564); */
+
 
   border-radius: 50px;
 }

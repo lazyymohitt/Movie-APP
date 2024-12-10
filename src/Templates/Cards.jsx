@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import noimage from "/noimage.webp";
+
 
 const Cards = ({ trends }) => {
   // console.log(trends);
@@ -15,9 +17,9 @@ const Cards = ({ trends }) => {
             <div className="imagee h-[80%] w-full">
               <img
                 className="h-full w-full object-cover object-center "
-                src={`https://image.tmdb.org/t/p/original/${
-                  mov.backdrop_path || mov.profile_path
-                }`}
+                src={ mov.backdrop_path || mov.profile_path ?`https://image.tmdb.org/t/p/original/${
+                  mov.backdrop_path || mov.profile_path 
+                }`: noimage }
                 alt=""
               />
             </div>

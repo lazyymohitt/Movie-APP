@@ -20,13 +20,13 @@ const TopNav = () => {
     getSearches();
   }, [query]);
   return (
-    <div className=" relative navbar w-full h-[10vh] flex justify-start items-center gap-4 ">
-      <i className=" text-2xl font-semibold ri-search-line ml-[20%] mt-1"></i>
+    <div className=" relative navbar w-full h-[10vh]  flex justify-start items-center gap-4 ">
+      <i className=" text-2xl font-semibold  ri-search-line ml-[20%] mt-2"></i>
       <input
         onChange={(e) => setQuery(e.target.value)}
         type="text"
         value={query}
-        className=" tracking-tight  w-[50%] px-5 py-2 bg-transparent text-zinc-300 font-semibold outline-none"
+        className=" tracking-tight mt-2  w-[50%] px-5 py-2 bg-transparent text-zinc-300 font-semibold outline-none"
         placeholder="Search Anything"
       />
       {query.length > 0 && (

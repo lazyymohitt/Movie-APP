@@ -21,7 +21,7 @@ const Header = ({ Image }) => {
           {Image.original_title || Image.title}.
         </h1>
         <p className="text-sm  letter tracking-wider leading-6">
-          {Image.overview.slice(0,120)}.
+          {Image.overview.slice(0,100)}.
         </p>{" "}
         <Link className="text-blue-500">more...</Link>
         <br />

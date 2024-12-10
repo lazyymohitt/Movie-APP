@@ -12,7 +12,7 @@ const Sidebar = () => {
       </h1>
       <nav className="flex flex-col text-zinc-400 ">
         <h1 className="text-xl font-semibold mt-2 mb-4">New Feeds</h1>
-        <Link className=" text-md  p-3 hover:bg-red-700 duration-300 hover:rounded-md mb-3 ">
+        <Link to="/trending" className=" text-md  p-3 hover:bg-red-700 duration-300 hover:rounded-md mb-3 ">
         <i className="ri-fire-fill mr-2"></i>
           Trending
         </Link>

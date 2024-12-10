@@ -30,13 +30,11 @@ const Home = () => {
     try {
      const {data} = await axios.get(`trending/${category}/day`)
      setcardsdets(data.results)
-     console.log("RESPOMSE" ,data)
     } catch (error) {
      console.log("Error", error)
     }
      }
     //  /useState for cards filtering-------------------------------------
-    //  console.log(cardsdets)
   /////////////////////////////////////////
 //  useEffect here-----------------
 useEffect(() => {
