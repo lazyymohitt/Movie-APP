@@ -82,7 +82,7 @@ const Trending = () => {
       dataLength={trendiss.length}
           next={latest}
           hasMore={hasmore}
-          loader={<h1>Loadingggg</h1>}>
+          loader={Loader}>
         <TgCards imagess={trendiss} />
       </InfiniteScroll>
     </div>
