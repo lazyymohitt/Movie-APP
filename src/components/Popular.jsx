@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import TopNav from "../Templates/TopNav";
 import Dropdown from "../Templates/Dropdown";
 import axios from "../utils/Axios";
@@ -6,18 +6,18 @@ import Loader from "../Templates/Loader"
 import { useNavigate } from "react-router-dom";
 import TgCards from "../Templates/TgCards";
 import InfiniteScroll from "react-infinite-scroll-component"
-const Trending = () => {
+const Popular = () => {
   const Navigate = useNavigate();
-  const [category, setcategory] = useState("all");
-  const [duration, setduration] = useState("day");
+  const [category, setcategory] = useState("movie");
   const [trendiss, settrendiss] = useState([]);
   const [page, setpage] = useState(1)
   const [hasmore ,sethasmore] = useState(true)
-  document.title = "Trending"+ " |  "+ category.toUpperCase();
+  document.title = "Popular"+ " |  "+ category.toUpperCase();
  
+
   const latest = async () => {
     try {
-      const { data } = await axios.get(`trending/${category}/${duration}?page=${page}`);
+      const { data } = await axios.get(`${category}/popular?page=${page}`);
 
 
       if(data.results.length > 0){
@@ -45,9 +45,9 @@ const Trending = () => {
   }
   useEffect(() => {
     refreshhandler()
-  }, [category, duration]);
+  }, [category]);
 
-  console.log(trendiss);
+  // console.log(trendiss);
 
   return trendiss.length > 0 ? (
     <div className="main  h-[100%] w-full ">
@@ -57,23 +57,15 @@ const Trending = () => {
             onClick={() => Navigate(-1)}
             className="ri-arrow-left-line  text-zinc-400  mr-4 text-3xl"
           ></i>
-          Trendings
+          Populars
         </h1>
         <TopNav />
         <div className="flex gap-3">
           <Dropdown
-            value={category}
+          value={category}
             title="CATEGORY"
             func={(e) => setcategory(e.target.value)}
-            options={[ "movie", "tv","all"]}
-          />
-          <Dropdown
-          value={duration}
-            title="DURATION"
-            func={(e) => {
-              setduration(e.target.value);
-            }}
-            options={["week", "day"]}
+            options={["movie","tv" ]}
           />
         </div>
       </div>
@@ -82,11 +74,10 @@ const Trending = () => {
       dataLength={trendiss.length}
           next={latest}
           hasMore={hasmore}
-          loader={<h1>Loadingggg</h1>}>
+          loader={<Loader/>}>
         <TgCards imagess={trendiss} />
       </InfiniteScroll>
-    </div>
-    
+    </div> 
   )
   :
   (
@@ -94,4 +85,5 @@ const Trending = () => {
 )
 };
 
-export default Trending;
+
+export default Popular

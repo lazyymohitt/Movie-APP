@@ -17,8 +17,8 @@ const Cards = ({ trends }) => {
             <div className="imagee h-[80%] w-full">
               <img
                 className="h-full w-full object-cover object-center "
-                src={ mov.backdrop_path || mov.profile_path ?`https://image.tmdb.org/t/p/original/${
-                  mov.backdrop_path || mov.profile_path 
+                src={ mov.backdrop_path || mov.profile_path || mov.poster_path ?`https://image.tmdb.org/t/p/original/${
+                  mov.backdrop_path || mov.profile_path  || mov.poster_path
                 }`: noimage }
                 alt=""
               />
