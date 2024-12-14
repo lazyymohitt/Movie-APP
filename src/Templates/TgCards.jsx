@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 const TgCards = ({imagess}) => {
   return (
-    <div className="h-full w-full flex flex-wrap gap-4 p-7 justify-center">
+    <div className="h-full w-full bg-[#1E1E1E] flex flex-wrap gap-4 p-7 justify-center">
     {imagess.map((elem,i)=>
-    <div className='h-[45vh] w-[15vw]   overflow-hidden '>
+    <div key={i} className='h-[45vh] w-[15vw]   overflow-hidden '>
       <img  className="h-[90%] w-full object-cover" src={
                 elem.poster_path || elem.profile_path
                   ? `https://image.tmdb.org/t/p/original${

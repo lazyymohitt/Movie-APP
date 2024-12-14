@@ -2,31 +2,41 @@ import React, { useEffect, useState } from "react";
 import TopNav from "../Templates/TopNav";
 import Dropdown from "../Templates/Dropdown";
 import axios from "../utils/Axios";
+import Loader from "../Templates/Loader"
 import { useNavigate } from "react-router-dom";
 import TgCards from "../Templates/TgCards";
+import InfiniteScroll from "react-infinite-scroll-component"
 const Trending = () => {
   document.title = "Trending";
   const Navigate = useNavigate();
   const [category, setcategory] = useState("all");
   const [duration, setduration] = useState("day");
   const [trendiss, settrendiss] = useState([]);
-
+  const [page, setpage] = useState(1)
+  const [hasMore ,sethasmore] = useState(true)
+ 
   const latest = async () => {
     try {
-      const { data } = await axios.get(`trending/${category}/${duration}`);
-      settrendiss(data.results);
+      const { data } = await axios.get(`trending/${category}/${duration}?page=${page}`);
+
+
+      if(data.results.length > 0){
+
+      }
+      
+      
     } catch (error) {
       console.log("Error :", error);
     }
   };
-  useEffect(()=>{
-    latest()
-  },[category,duration ])
-  
-   console.log(trendiss)
+  useEffect(() => {
+    latest();
+  }, [category, duration]);
 
-  return (
-    <div className="main  h-[100%] w-full overflow-y-auto ">
+  console.log(trendiss);
+
+  return trendiss.length > 0 ? (
+    <div className="main  h-[100%] w-full ">
       <div className="nav h-[13vh] flex px-4 py-2 w-full items-baseline">
         <h1 className="text-2xl text-zinc-400 font-semibold ">
           <i
@@ -35,15 +45,37 @@ const Trending = () => {
           ></i>
           Trendings
         </h1>
-        <TopNav/>
+        <TopNav />
         <div className="flex gap-3">
-          <Dropdown title="CATEGORY" func={(e)=>setcategory(e.target.value)} options={["all", "movie", "tv"]} />
-          <Dropdown title="DURATION" func={(e)=>{setduration(e.target.value)}} options={["week", "day"]} />
+          <Dropdown
+            title="CATEGORY"
+            func={(e) => setcategory(e.target.value)}
+            options={["all", "movie", "tv"]}
+          />
+          <Dropdown
+            title="DURATION"
+            func={(e) => {
+              setduration(e.target.value);
+            }}
+            options={["week", "day"]}
+          />
         </div>
       </div>
-      <TgCards imagess={trendiss}/>
+
+      <InfiniteScroll
+      dataLength={trendiss.length}
+          next={latest}
+          hasMore={true}
+          loader={<Loader/>}>
+        <TgCards imagess={trendiss} />
+      </InfiniteScroll>
     </div>
-  );
+    
+  )
+  :
+  (
+    <Loader />
+)
 };
 
 export default Trending;
