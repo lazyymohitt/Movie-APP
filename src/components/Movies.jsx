@@ -10,7 +10,7 @@ import InfiniteScroll from "react-infinite-scroll-component"
 const Movies = () => {
     const Navigate = useNavigate();
     const [category, setcategory] = useState("now_playing");
-    const [trendiss, settrendiss] = useState([]);
+    const [movies, setmovies] = useState([]);
     const [page, setpage] = useState(1)
     const [hasmore ,sethasmore] = useState(true)
     document.title = "Movies"+ " |  "+ category.toUpperCase();
@@ -22,7 +22,7 @@ const Movies = () => {
   
   
         if(data.results.length > 0){
-          settrendiss((prev)=> [...prev, ...data.results])
+          setmovies((prev)=> [...prev, ...data.results])
           setpage(page+1)
         }
         else{
@@ -35,12 +35,12 @@ const Movies = () => {
       }
     };
     const refreshhandler = ()=>{
-      if (trendiss.length===0) {
+      if (movies.length===0) {
         latest()
       }
       else{
         setpage(1)
-        settrendiss([])
+        setmovies([])
         latest()
       }
     }
@@ -48,9 +48,9 @@ const Movies = () => {
       refreshhandler()
     }, [category]);
   
-    // console.log(trendiss);
+    // console.log(movies);
   
-    return trendiss.length > 0 ? (
+    return movies.length > 0 ? (
       <div className="main  h-[100%] w-full ">
         <div className="nav h-[13vh] flex px-4 py-2 w-full items-baseline">
           <h1 className="text-2xl text-zinc-400 font-semibold ">
@@ -77,11 +77,11 @@ const Movies = () => {
         </div>
   
         <InfiniteScroll
-        dataLength={trendiss.length}
+        dataLength={movies.length}
             next={latest}
             hasMore={hasmore}
             loader={<Loader/>}>
-          <TgCards imagess={trendiss} />
+          <TgCards imagess={movies} />
         </InfiniteScroll>
       </div> 
     )
