@@ -1,0 +1,8 @@
+.button {
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .button:hover {
+    background-color: violet !important; /* Change background to red on hover */
+  }
+  

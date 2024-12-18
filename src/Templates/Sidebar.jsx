@@ -28,7 +28,7 @@ const Sidebar = () => {
         <i className="ri-tv-2-fill mr-2"></i>
           Tv Shows{" "}
         </Link>
-        <Link className=" text-md mb-2 p-3 hover:bg-red-700 duration-300 hover:rounded-lg ">
+        <Link to="peoples" className=" text-md mb-2 p-3 hover:bg-red-700 duration-300 hover:rounded-lg ">
         <i className="ri-group-2-fill mr-2"></i>
           People
         </Link>
@@ -39,7 +39,7 @@ const Sidebar = () => {
       <i className="ri-information-fill mr-2"></i>
           About 
         </Link>
-        <Link className=" text-md  p-3 hover:bg-red-700 duration-300 hover:rounded-md mb-3 ">
+        <Link to="contactus" className=" text-md  p-3 hover:bg-red-700 duration-300 hover:rounded-md mb-3 ">
         <i className="ri-customer-service-2-fill mr-2"></i>
           Contact Us
         </Link>

@@ -7,22 +7,22 @@ import { useNavigate } from "react-router-dom";
 import TgCards from "../Templates/TgCards";
 import InfiniteScroll from "react-infinite-scroll-component"
 
-const Tvshows = () => {
+const Peoples = () => {
     const Navigate = useNavigate();
-    const [category, setcategory] = useState("airing_today");
-    const [tvshows, settvshows] = useState([]);
+    const [category, setcategory] = useState("popular");
+    const [peoples, setpeoples] = useState([]);
     const [page, setpage] = useState(1)
     const [hasmore ,sethasmore] = useState(true)
-    document.title = "Tv shows"+ " |  "+ category.toUpperCase();
+    document.title = "Peoples" 
    
   
     const latest = async () => {
       try {
-        const { data } = await axios.get(`/tv/${category}?page=${page}`);
-  
+        const { data } = await axios.get(`/person/${category}?page=${page}`);
+        // const { data } = await axios.get(`/tv/${category}?page=${page}`);
   
         if(data.results.length > 0){
-          settvshows((prev)=> [...prev, ...data.results])
+          setpeoples((prev)=> [...prev, ...data.results])
           setpage(page+1)
         }
         else{
@@ -35,12 +35,12 @@ const Tvshows = () => {
       }
     };
     const refreshhandler = ()=>{
-      if (tvshows.length===0) {
+      if (peoples.length===0) {
         latest()
       }
       else{
         setpage(1)
-        settvshows([])
+        setpeoples([])
         latest()
       }
     }
@@ -48,41 +48,30 @@ const Tvshows = () => {
       refreshhandler()
     }, [category]);
   
-    // console.log(tvshows);
+    // console.log(peoples);
   
-    return tvshows.length > 0 ? (
-      <div className="main  h-[100%] w-full  ">
+    return peoples.length > 0 ? (
+      <div className="main  h-[100%] w-full ">
         <div className="nav h-[13vh] flex px-4 py-2 w-full items-baseline">
           <h1 className="text-2xl text-zinc-400 font-semibold ">
             <i
               onClick={() => Navigate(-1)}
               className="ri-arrow-left-line  text-zinc-400  mr-4 text-2xl"
             ></i>
-            TvShows
+            Peoples
           </h1>
           <TopNav />
           <div className="flex gap-3">
-            <Dropdown
-            value={category}
-              title="CATEGORY"
-              func={(e) => setcategory(e.target.value)}
-              options={[
-                            "on_the_air",
-                            "popular",
-                            "top_rated",
-                            "airing_today",
-                        ]}
-            />
           </div>
         </div>
-        <InfiniteScroll  
-        dataLength={tvshows.length}
+  
+        <InfiniteScroll
+        dataLength={peoples.length}
             next={latest}
             hasMore={hasmore}
             loader={<Loader/>}>
-          <TgCards imagess={tvshows} />
+          <TgCards  imagess={peoples} />
         </InfiniteScroll>
-
       </div> 
     )
     :
@@ -91,4 +80,4 @@ const Tvshows = () => {
   )
 }
 
-export default Tvshows
+export default Peoples
