@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="w-[20%] h-full border-r-2 border-zinc-400 p-10">
-      <h1 className="text-2xl my-5 ">
+    <div className="w-[20%] h-full border-r-2 border-zinc-400 px-10 py-5">
+      <h1 className="text-2xl my-5 pb-4 ">
         <i className="ri-clapperboard-ai-fill text-red-500 mr-2"></i>
         <span className="font-bold tracking-wider text-zinc-500">
           StreamFlix.

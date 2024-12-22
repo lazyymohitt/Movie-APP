@@ -75,7 +75,7 @@ const Popular = () => {
           next={latest}
           hasMore={hasmore}
           loader={<Loader/>}>
-        <TgCards imagess={populars} />
+        <TgCards title={category} imagess={populars} />
       </InfiniteScroll>
     </div> 
   )

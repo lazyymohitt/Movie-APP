@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 import noimage from "/noimage.webp";
 
 
-const Cards = ({ trends }) => {
-  // console.log(trends);
-
+const Cards = ({ data, title }) => {
   return (
 
       <div className=".card-container h-[30vh] p-4 w-full flex overflow-x-auto ">
-        {trends.map((mov, i) => (
+        {data.map((mov, i) => (
           <div
             key={i}
             className="cards overflow-hidden relative h-[100%]  min-w-[15%] mr-3   bg-zinc-800 rounded-xl"

@@ -2,7 +2,7 @@ import noimage from "/noimage.webp";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const TgCards = ({ imagess }) => {
+const TgCards = ({imagess,title}) => {
   return (
     <div className=" h-full w-full bg-[#1E1E1E] flex flex-wrap gap-5 p-7 justify-center">
       {imagess.map((elem, i) => (

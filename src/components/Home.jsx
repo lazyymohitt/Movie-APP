@@ -58,9 +58,9 @@ useEffect(() => {
           Trendings..
           <i className=" ml-1 text-white  ri-blaze-fill"></i>
         </h1>
-        <Dropdown title="FILTER" options={["all", "tv","movie"]} func={(e)=>setcategory(e.target.value)}/>
+        <Dropdown title="FILTER" options={["all","tv","movie"]} func={(e)=>setcategory(e.target.value)}/>
       </div>
-      <Cards trends={cardsdets} />
+      <Cards data={cardsdets} />
       </div>
     </>
   ) : <Loader/>

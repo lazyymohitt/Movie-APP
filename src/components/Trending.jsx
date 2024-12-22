@@ -47,7 +47,7 @@ const Trending = () => {
     refreshhandler()
   }, [category, duration]);
 
-  console.log(trendiss);
+  // console.log(trendiss);
 
   return trendiss.length > 0 ? (
     <div className="main  h-[100%] w-full ">
@@ -82,8 +82,8 @@ const Trending = () => {
       dataLength={trendiss.length}
           next={latest}
           hasMore={hasmore}
-          loader={Loader}>
-        <TgCards imagess={trendiss} />
+          loader={<Loader/>}>
+        <TgCards title={category} imagess={trendiss} />
       </InfiniteScroll>
     </div>
     

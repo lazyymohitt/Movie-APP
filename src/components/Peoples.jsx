@@ -70,7 +70,7 @@ const Peoples = () => {
             next={latest}
             hasMore={hasmore}
             loader={<Loader/>}>
-          <TgCards  imagess={peoples} />
+          <TgCards title="person"  imagess={peoples} />
         </InfiniteScroll>
       </div> 
     )
