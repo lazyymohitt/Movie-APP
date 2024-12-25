@@ -11,12 +11,12 @@ export const movieSlice = createSlice({
         loadmovie: (state, action) => {
             state.info = action.payload;
         },
-        removemovie: (state, action) => {
+        removeMovie: (state, action) => {
             state.info = null;
         },
     },
 });
 
-export const { loadmovie, removemovie } = movieSlice.actions;
+export const { loadmovie, removeMovie } = movieSlice.actions;
 
 export default movieSlice.reducer;

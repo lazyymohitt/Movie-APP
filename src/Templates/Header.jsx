@@ -23,7 +23,7 @@ const Header = ({ Image }) => {
         <p className="text-sm  letter tracking-wider leading-6">
           {Image.overview.slice(0,100)}.
         </p>{" "}
-        <Link className="text-blue-500">more...</Link>
+        <Link to={`${Image.media_type}/details/${Image.id}`} className="text-blue-500">more...</Link>
         <br />
         <p className="mb-4">
           <i className="text-yellow-400 mr-2 ri-megaphone-fill"></i>

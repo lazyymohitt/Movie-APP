@@ -10,6 +10,7 @@ import ContactUS from './Templates/ContactUS'
 import MovieDetails from './components/MovieDetails'
 import Tvdetails from './components/Tvdetails'
 import PersonDetails from './components/PersonDetails'
+import Trailer from './Templates/Trailer'
 
 function App() {
   return (
@@ -18,12 +19,18 @@ function App() {
     <Route path='/' element={<Home/>}/>
     <Route path='/trending' element={<Trending/>}/>
     <Route path='/popular' element={<Popular/>}/>
-    <Route path='/movies' element={<Movies/>}/>
-    <Route path='/movies/details/:id' element={<MovieDetails/>}/>
-    <Route path='/tvshows' element={<Tvshows/>}/>
-    <Route path='/tvshows/details:id' element={<Tvdetails/>}/>
-    <Route path='/peoples' element={<Peoples/>}/>
-    <Route path='/peoples/details/:id' element={<PersonDetails/>}/>
+    <Route path='/movie' element={<Movies/>}/>
+    <Route path="/movie/details/:id" element={<MovieDetails/>}>
+                    <Route
+                        path="/movie/details/:id/trailer"
+                        element={<Trailer/>}
+                    />
+                </Route>
+
+    <Route path='/tv' element={<Tvshows/>}/>  
+    <Route path='/tv/details/:id' element={<Tvdetails/>}/>
+    <Route path='/person' element={<Peoples/>}/>
+    <Route path='/person/details/:id' element={<PersonDetails/>}/>
     <Route path='/contactus' element={<ContactUS/>}/>
    </Routes>
     </div>

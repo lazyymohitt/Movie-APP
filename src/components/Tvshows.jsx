@@ -80,7 +80,7 @@ const Tvshows = () => {
             next={latest}
             hasMore={hasmore}
             loader={<Loader/>}>
-          <TgCards imagess="tv" title={category} />
+          <TgCards imagess={tvshows} title="tv" />
         </InfiniteScroll>
 
       </div> 

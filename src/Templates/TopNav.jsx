@@ -9,7 +9,7 @@ const TopNav = () => {
   // console.log(query)
   const getSearches = async () => {
     try {
-      const { data } = await axios.get(`search/movie?query=${query}`);
+      const { data } = await axios.get(`search/multi?query=${query}`);
       setsearches(data.results);
       // console.log(data.results)
     } catch (error) {
@@ -38,6 +38,7 @@ const TopNav = () => {
       <div className=" SearchedDiv  z-10 absolute max-h-[50vh] overflow-auto w-[50%] top-[80%]  left-[23.5%] bg-[#27272A] rounded-md">
         {searches.map((movie, i) => (
           <Link
+          to={`/${movie.media_type}/details/${movie.id} `}
             key={i}
             className=" border-b-2 border-[#36393b] w-[100%] py-10 px-8  bg-[#232222] hover:bg-[#EF4444]  text-white duration-200 flex"
           >

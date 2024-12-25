@@ -3,10 +3,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const TgCards = ({imagess,title}) => {
+  // console.log(title);
   return (
     <div className=" h-full w-full bg-[#1E1E1E] flex flex-wrap gap-5 p-7 justify-center">
       {imagess.map((elem, i) => (
-        <div key={i} className=" relative h-[45vh] w-[15vw] mr-5 rounded-md  ">
+        <Link
+        to={`/${elem.media_type || title}/details/${elem.id}`} 
+        key={i} className=" relative h-[45vh] min-w-[15vw] mr-5 rounded-md  ">
           <img
             className="h-[90%] w-full object-cover"
             src={
@@ -26,7 +29,7 @@ const TgCards = ({imagess,title}) => {
           </div>
           )}
         
-        </div>
+        </Link>
       ))}
     </div>
   );

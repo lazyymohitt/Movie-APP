@@ -15,7 +15,7 @@ const Home = () => {
   const [wallpaper, setwallpaper] = useState(null);
   const Trendings = async () => {
     try {
-      const { data } = await axios.get(`trending/movie/day`);
+      const { data } = await axios.get(`trending/all/day`);
       const Randomnums = Math.floor(Math.random() * data.results.length);
       setwallpaper(data.results[Randomnums]);
       // console.log(data.results[Randomnums])
