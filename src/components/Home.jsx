@@ -50,10 +50,10 @@ useEffect(() => {
   return wallpaper && cardsdets ? (
     <>
       <Sidebar />
-      <div className="w-[80%] h-full  ">
+      <div className="w-[80%] h-full overflow-x-hidden  ">
         <TopNav />
         <Header Image={wallpaper} />
-        <div className="headings pt-5 px-8 flex justify-between">
+        <div className="headings pt-5 px-6 flex justify-between">
         <h1 className="text-2xl  font-semibold text-white ">
           Trendings..
           <i className=" ml-1 text-white  ri-blaze-fill"></i>

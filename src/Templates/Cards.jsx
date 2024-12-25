@@ -6,7 +6,7 @@ import noimage from "/noimage.webp";
 const Cards = ({ data, title }) => {
   return (
 
-      <div className=".card-container h-[34vh] p-4 w-full flex overflow-x-auto ">
+      <div className=".card-container h-[31vh] p-4 w-full flex overflow-x-auto ">
         {data.map((mov, i) => (
           <Link
           to={`/${mov.media_type}/details/${mov.id}`}

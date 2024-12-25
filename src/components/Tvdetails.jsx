@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 import Cards from "../Templates/Cards";
 import Loader from "../Templates/Loader";
+import noimage from "/noimage.webp";
+
 
 const tvdetails = () => {
   document.title = "StreamFlixx | tv Details";

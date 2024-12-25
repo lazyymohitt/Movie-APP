@@ -31,7 +31,9 @@ const Header = ({ Image }) => {
           <i className=" text-yellow-400 ml-2 ri-disc-fill"></i> {Image.
             media_type.toUpperCase()}
         </p>
-        <Link className="bg-[#EF4444] px-5 py-2 font-semibold rounded-md">Watch Trailer</Link>
+        <Link
+        to={`/${Image.media_type}/details/${Image.id}/trailer`}
+         className="bg-[#EF4444] px-5 py-2 font-semibold rounded-md">Watch Trailer</Link>
       </div>
     </div>
   );
