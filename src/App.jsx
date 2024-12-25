@@ -6,7 +6,7 @@ import Popular from './components/Popular'
 import Movies from './components/Movies'
 import Tvshows from './components/Tvshows'
 import Peoples from './components/Peoples'
-import ContactUS from './Templates/ContactUS'
+import ContactUs from './Templates/ContactUS'
 import MovieDetails from './components/MovieDetails'
 import Tvdetails from './components/Tvdetails'
 import PersonDetails from './components/PersonDetails'
@@ -37,7 +37,7 @@ function App() {
     </Route>
     <Route path='/person' element={<Peoples/>}/>
     <Route path='/person/details/:id' element={<PersonDetails/>}/>
-    <Route path='/contactus' element={<ContactUS/>}/>
+    <Route path='/contactus' element={<ContactUs/>}/>
     <Route path='*' element={<NotFound/>}/>
    </Routes>
     </div>
