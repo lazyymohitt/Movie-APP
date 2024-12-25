@@ -23,7 +23,7 @@ Check out the live application here: [Movie App](https://movie-app-87zb-2abzkng8
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repository/movie-app.git
+   git clone https://github.com/lazyymohitt/Movie-APP.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -41,7 +41,7 @@ Check out the live application here: [Movie App](https://movie-app-87zb-2abzkng8
 ## Usage
 1. Open the application in your browser:
    ```
-   http://localhost:3000
+   http://localhost:5173
    ```
 2. Browse trending movies and TV shows.
 3. Use the dropdowns to filter by category and duration.
