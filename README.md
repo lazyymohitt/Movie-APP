@@ -1,7 +1,3 @@
-![Screenshot (8)](https://github.com/user-attachments/assets/a0bd3ba6-e18a-4ede-9d1f-44eea9309681)
-![Screenshot (7)](https://github.com/user-attachments/assets/69b9ac1d-45f0-4431-a047-45d4dcb4e210)
-![Screenshot (6)](https://github.com/user-attachments/assets/c7723098-71ef-49fa-909b-3f85c241b00d)
-![Screenshot (5)](https://github.com/user-attachments/assets/cc519edb-dda8-44f1-964e-42d515ce5bab)
 # Movie App
 
 ## Overview
@@ -79,4 +75,11 @@ This project is licensed under the [MIT License](LICENSE).
 For any inquiries or feedback, feel free to reach out:
 - Email: async.mohitt@gmail.com
 - GitHub: [My-github-profile](https://github.com/lazyymohitt)
+
+PROJECT PREVIEW!!!!!!!!!
+
+![Screenshot (5)](https://github.com/user-attachments/assets/884f1b14-69db-4296-ab8c-bf588bd129e1)
+![Screenshot (7)](https://github.com/user-attachments/assets/07f043f4-0c81-4953-a2af-1bfe34a16965)
+![Screenshot (6)](https://github.com/user-attachments/assets/c701d047-27fb-4bcd-b87c-8026b9e95f93)
+![Screenshot (8)](https://github.com/user-attachments/assets/588995cc-4743-46fd-a1ce-65b27887b93f)
 
